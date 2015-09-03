@@ -1,6 +1,6 @@
 ﻿namespace FSB
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Erforderliche Designervariable.
