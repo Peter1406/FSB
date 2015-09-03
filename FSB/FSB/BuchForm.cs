@@ -16,5 +16,40 @@ namespace FSB
         {
             InitializeComponent();
         }
+
+        private void einstellungenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Einstellungen_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void freundHinzufügenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
