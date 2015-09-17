@@ -116,6 +116,7 @@
             this.skinsToolStripMenuItem.Name = "skinsToolStripMenuItem";
             this.skinsToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.skinsToolStripMenuItem.Text = "Skins";
+            this.skinsToolStripMenuItem.Click += new System.EventHandler(this.skinsToolStripMenuItem_Click);
             // 
             // überMichÄndernToolStripMenuItem
             // 

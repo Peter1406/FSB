@@ -51,5 +51,10 @@ namespace FSB
         {
 
         }
+
+        private void skinsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
