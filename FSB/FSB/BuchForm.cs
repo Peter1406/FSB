@@ -12,9 +12,11 @@ namespace FSB
 {
     public partial class BuchForm : Form
     {
-        public BuchForm()
+        private Buch Buch;
+        public BuchForm(Buch Buch)
         {
             InitializeComponent();
+            this.Buch = Buch;
         }
 
         private void einstellungenToolStripMenuItem_Click(object sender, EventArgs e)

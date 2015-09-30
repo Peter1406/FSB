@@ -9,5 +9,17 @@ namespace FSB
     class Buch
     {
         public List<Freund> Freundesliste;
+        public Buch()
+        {
+
+        }
+        public void Freund_hinzufügen(String Vorname, String Nachname, String Straße, String Ort, String Augenfarbe, 
+                                      String Hobbys, String Musikrichtung, String Lieblingsdino, String Lieblingsfarbe,
+                                      String Lieblingsessen, int Hausnummer, int Größe, int Gewicht, DateTime GebDatum,
+                                      DateTime Datum)
+        {
+            Freundesliste.Add(new Freund(Vorname, Nachname, Straße, Ort, Augenfarbe, Hobbys, Musikrichtung, Lieblingsdino,
+                                         Lieblingsfarbe, Lieblingsessen, Hausnummer, Größe, Gewicht, GebDatum, Datum));
+        }
     }
 }

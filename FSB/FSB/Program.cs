@@ -16,7 +16,7 @@ namespace FSB
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BuchForm());
+            Application.Run(new BuchForm(new Buch()));
         }
     }
 }
