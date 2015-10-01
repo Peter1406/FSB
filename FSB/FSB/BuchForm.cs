@@ -17,6 +17,7 @@ namespace FSB
         {
             InitializeComponent();
             this.Buch = Buch;
+            init();
         }
 
         private void einstellungenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -55,6 +56,26 @@ namespace FSB
         }
 
         private void skinsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void über_mich_button_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+        }
+
+        private void init()
+        {
+            foreach(Freund Freund in Buch.Freundesliste)
+            {
+                string title = Freund.Vorname +" "+ Freund.Nachname;
+                TabPage myTabPage = new TabPage(title);
+                tabControl1.TabPages.Add(tabControl1.TabPages.Count-1,);
+            }
+        }
+
+        private void Freund_hinzufügen_btn_Click(object sender, EventArgs e)
         {
 
         }
