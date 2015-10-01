@@ -8,7 +8,7 @@ namespace FSB
 {
     class Buch
     {
-        public List<Freund> Freundesliste;
+        private List<Freund> Freundesliste;
         public Buch()
         {
 
@@ -20,6 +20,11 @@ namespace FSB
         {
             Freundesliste.Add(new Freund(Vorname, Nachname, Straße, Ort, Augenfarbe, Hobbys, Musikrichtung, Lieblingsdino,
                                          Lieblingsfarbe, Lieblingsessen, Hausnummer, Größe, Gewicht, GebDatum, Datum));
+        }
+
+        public List<Freund> ListeAusgeben()
+        {
+            return Freundesliste;
         }
     }
 }

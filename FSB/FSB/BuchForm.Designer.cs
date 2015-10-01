@@ -31,18 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuchForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.freundHinzufügenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hinzufügenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bearbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.löschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.freundeslisteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.skinsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.überMichÄndernToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.achievementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bearbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.readMeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fAQToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.freundeslisteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,26 +68,6 @@
             this.dateiToolStripMenuItem.Text = "Datei";
             this.dateiToolStripMenuItem.Click += new System.EventHandler(this.dateiToolStripMenuItem_Click);
             // 
-            // einstellungenToolStripMenuItem
-            // 
-            this.einstellungenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.skinsToolStripMenuItem,
-            this.überMichÄndernToolStripMenuItem,
-            this.achievementsToolStripMenuItem});
-            this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
-            this.einstellungenToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
-            this.einstellungenToolStripMenuItem.Text = "Einstellungen";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.readMeToolStripMenuItem,
-            this.fAQToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
-            this.toolStripMenuItem1.Text = "?";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
             // freundHinzufügenToolStripMenuItem
             // 
             this.freundHinzufügenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -102,14 +82,36 @@
             // hinzufügenToolStripMenuItem
             // 
             this.hinzufügenToolStripMenuItem.Name = "hinzufügenToolStripMenuItem";
-            this.hinzufügenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.hinzufügenToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.hinzufügenToolStripMenuItem.Text = "hinzufügen";
+            // 
+            // bearbeitenToolStripMenuItem
+            // 
+            this.bearbeitenToolStripMenuItem.Name = "bearbeitenToolStripMenuItem";
+            this.bearbeitenToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.bearbeitenToolStripMenuItem.Text = "bearbeiten";
             // 
             // löschenToolStripMenuItem
             // 
             this.löschenToolStripMenuItem.Name = "löschenToolStripMenuItem";
-            this.löschenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.löschenToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.löschenToolStripMenuItem.Text = "löschen";
+            // 
+            // freundeslisteToolStripMenuItem
+            // 
+            this.freundeslisteToolStripMenuItem.Name = "freundeslisteToolStripMenuItem";
+            this.freundeslisteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.freundeslisteToolStripMenuItem.Text = "Freundesliste";
+            // 
+            // einstellungenToolStripMenuItem
+            // 
+            this.einstellungenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.skinsToolStripMenuItem,
+            this.überMichÄndernToolStripMenuItem,
+            this.achievementsToolStripMenuItem});
+            this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
+            this.einstellungenToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.einstellungenToolStripMenuItem.Text = "Einstellungen";
             // 
             // skinsToolStripMenuItem
             // 
@@ -130,29 +132,27 @@
             this.achievementsToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.achievementsToolStripMenuItem.Text = "Achievements";
             // 
-            // bearbeitenToolStripMenuItem
+            // toolStripMenuItem1
             // 
-            this.bearbeitenToolStripMenuItem.Name = "bearbeitenToolStripMenuItem";
-            this.bearbeitenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.bearbeitenToolStripMenuItem.Text = "bearbeiten";
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.readMeToolStripMenuItem,
+            this.fAQToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
+            this.toolStripMenuItem1.Text = "?";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // readMeToolStripMenuItem
             // 
             this.readMeToolStripMenuItem.Name = "readMeToolStripMenuItem";
-            this.readMeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.readMeToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.readMeToolStripMenuItem.Text = "Read me";
             // 
             // fAQToolStripMenuItem
             // 
             this.fAQToolStripMenuItem.Name = "fAQToolStripMenuItem";
-            this.fAQToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fAQToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.fAQToolStripMenuItem.Text = "FAQ";
-            // 
-            // freundeslisteToolStripMenuItem
-            // 
-            this.freundeslisteToolStripMenuItem.Name = "freundeslisteToolStripMenuItem";
-            this.freundeslisteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.freundeslisteToolStripMenuItem.Text = "Freundesliste";
             // 
             // BuchForm
             // 
