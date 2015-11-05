@@ -6,29 +6,25 @@ using System.Threading.Tasks;
 
 namespace FSB
 {
-    public class Buch
+    class Buch
     {
-        private List<Freund> freundesliste;
+        private List<Freund> Freundesliste;
         public Buch()
         {
-            freundesliste = new List<Freund>();
-            freundesliste.Add(new Freund());
+
         }
         public void Freund_hinzufügen(String Vorname, String Nachname, String Straße, String Ort, String Augenfarbe, 
                                       String Hobbys, String Musikrichtung, String Lieblingsdino, String Lieblingsfarbe,
                                       String Lieblingsessen, int Hausnummer, int Größe, int Gewicht, DateTime GebDatum,
                                       DateTime Datum)
         {
-            freundesliste.Add(new Freund(Vorname, Nachname, Straße, Ort, Augenfarbe, Hobbys, Musikrichtung, Lieblingsdino,
+            Freundesliste.Add(new Freund(Vorname, Nachname, Straße, Ort, Augenfarbe, Hobbys, Musikrichtung, Lieblingsdino,
                                          Lieblingsfarbe, Lieblingsessen, Hausnummer, Größe, Gewicht, GebDatum, Datum));
         }
 
-
-
-        public List<Freund> Freundesliste
+        public List<Freund> ListeAusgeben()
         {
-            get { return freundesliste; }
+            return Freundesliste;
         }
-        
     }
 }
