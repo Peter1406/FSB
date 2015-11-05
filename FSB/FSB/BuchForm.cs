@@ -71,7 +71,7 @@ namespace FSB
             {
                 string title = Freund.Vorname +" "+ Freund.Nachname;
                 TabPage myTabPage = new TabPage(title);
-                tabControl1.TabPages.Add(title);
+                tabControl1.TabPages.Add(tabControl1.TabPages.Count-1,);
             }
         }
 
