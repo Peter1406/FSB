@@ -4,16 +4,19 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net; // HTTP Zeugs
+using System.Net.NetworkInformation;
+using System.IO;  // Streamreader usw
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net.NetworkInformation;
 
 namespace FSB
 {
     public partial class Login : Form
     {
         string InputEingabe;
+        string WebPfad = "http://edv-biela.de/1Schule/";
         public Login()
         {
             InitializeComponent();
@@ -35,12 +38,25 @@ namespace FSB
             {
                 MessageBox.Show("Ihre Eingabe ist fehlerhaft. \nBitte versuchen Sie es erneut", "Fehlerhafte Eingabe", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else
+            {
+                //Loged In
+                if (GetHtmlSource(WebPfad + "Login.php?user=" + tbLoginUser.Text).Replace(" ", "") == tbLoginPassword.Text)
+                {
+                    MessageBox.Show("Es hat funktioniert!");
+                }
+                else // Falsche Logindaten
+                {
+                    MessageBox.Show(GetHtmlSource(WebPfad + "Login.php?user=" + tbLoginUser.Text) + "'\n" + tbLoginPassword.Text);
+                }
+            }
 
             
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            ////////Leerzeichen verbieten
             if (tbRegisterUser.Text == "" || 
                 tbRegisterPassword.Text == "" || !(tbRegisterPasswordCheck.Text == tbRegisterPassword.Text) ||
                 tbRegisterMail.Text == "" || !(tbRegisterMail.Text.Contains("@")) || !(tbRegisterMail.Text.Contains(".")) || 
@@ -59,7 +75,7 @@ namespace FSB
 
         }
 
-        private void LinkPassvergessen_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkPassVergessen_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             InputEingabe = Microsoft.VisualBasic.Interaction.InputBox("Bitte geben Sie Ihren Usernamen ODER Ihre E-Mailadresse ein um Ihr neues Passwort zugeschickt zu bekommen.", "Reset Passwort","");
             BookGetPassword(InputEingabe);
@@ -71,6 +87,34 @@ namespace FSB
 
 
         #region DBK ansprechen
+        private string GetHtmlSource(string url)
+        {
+
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                Stream receiveStream = response.GetResponseStream();
+                StreamReader readStream = null;
+
+                if (response.CharacterSet == null)
+                {
+                    readStream = new StreamReader(receiveStream);
+                }
+                else
+                {
+                    readStream = new StreamReader(receiveStream, Encoding.GetEncoding(response.CharacterSet));
+                }
+
+                string data = readStream.ReadToEnd();
+
+                response.Close();
+                readStream.Close();
+                return data;
+            }
+            else return "";
+        }
         private void BookLogin(string user, string pass)
         {
             MessageBox.Show("Ihre Eingabe ist fehlerhaft. \nBitte versuchen Sie es erneut.", "Fehlerhafte Eingabe", MessageBoxButtons.OK, MessageBoxIcon.Error);
