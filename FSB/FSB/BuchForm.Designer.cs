@@ -44,12 +44,21 @@
             this.fAQToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Startseite = new System.Windows.Forms.TabPage();
-            this.Freund_hinzufügen_btn = new System.Windows.Forms.Button();
+            this.btnZuFreund = new System.Windows.Forms.Button();
             this.über_mich_button = new System.Windows.Forms.Button();
             this.Über_Mich = new System.Windows.Forms.TabPage();
             this.Freund_hinzufügen_page = new System.Windows.Forms.TabPage();
             this.gbInteressen = new System.Windows.Forms.GroupBox();
+            this.btnFreundhinzufuegen = new System.Windows.Forms.Button();
+            this.tbLieblingsessen = new System.Windows.Forms.TextBox();
+            this.tbLieblingsfarbe = new System.Windows.Forms.TextBox();
+            this.tbLieblingsdino = new System.Windows.Forms.TextBox();
+            this.tbMusikrichtung = new System.Windows.Forms.TextBox();
+            this.tbHobbys = new System.Windows.Forms.TextBox();
             this.gbPersönliches = new System.Windows.Forms.GroupBox();
+            this.tbHausnummer = new System.Windows.Forms.TextBox();
+            this.tbStraße = new System.Windows.Forms.TextBox();
+            this.tbOrt = new System.Windows.Forms.TextBox();
             this.tbHaarfarbe = new System.Windows.Forms.TextBox();
             this.mtbGewicht = new System.Windows.Forms.MaskedTextBox();
             this.mtbGröße = new System.Windows.Forms.MaskedTextBox();
@@ -57,10 +66,6 @@
             this.mtbGeburtsdatum = new System.Windows.Forms.MaskedTextBox();
             this.tbNachname = new System.Windows.Forms.TextBox();
             this.tbVorname = new System.Windows.Forms.TextBox();
-            this.tbOrt = new System.Windows.Forms.TextBox();
-            this.tbStraße = new System.Windows.Forms.TextBox();
-            this.tbHausnummer = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Startseite.SuspendLayout();
@@ -89,7 +94,6 @@
             this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
             this.dateiToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.dateiToolStripMenuItem.Text = "Datei";
-            this.dateiToolStripMenuItem.Click += new System.EventHandler(this.dateiToolStripMenuItem_Click);
             // 
             // freundHinzufügenToolStripMenuItem
             // 
@@ -100,7 +104,6 @@
             this.freundHinzufügenToolStripMenuItem.Name = "freundHinzufügenToolStripMenuItem";
             this.freundHinzufügenToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.freundHinzufügenToolStripMenuItem.Text = "Freunde";
-            this.freundHinzufügenToolStripMenuItem.Click += new System.EventHandler(this.freundHinzufügenToolStripMenuItem_Click);
             // 
             // hinzufügenToolStripMenuItem
             // 
@@ -141,7 +144,6 @@
             this.skinsToolStripMenuItem.Name = "skinsToolStripMenuItem";
             this.skinsToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.skinsToolStripMenuItem.Text = "Skins";
-            this.skinsToolStripMenuItem.Click += new System.EventHandler(this.skinsToolStripMenuItem_Click);
             // 
             // überMichÄndernToolStripMenuItem
             // 
@@ -163,7 +165,6 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
             this.toolStripMenuItem1.Text = "?";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // readMeToolStripMenuItem
             // 
@@ -192,7 +193,7 @@
             // 
             this.Startseite.BackgroundImage = global::FSB.Properties.Resources.kgfsbpk5;
             this.Startseite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Startseite.Controls.Add(this.Freund_hinzufügen_btn);
+            this.Startseite.Controls.Add(this.btnZuFreund);
             this.Startseite.Controls.Add(this.über_mich_button);
             this.Startseite.Location = new System.Drawing.Point(4, 22);
             this.Startseite.Name = "Startseite";
@@ -202,15 +203,15 @@
             this.Startseite.Text = "Startseite";
             this.Startseite.UseVisualStyleBackColor = true;
             // 
-            // Freund_hinzufügen_btn
+            // btnZuFreund
             // 
-            this.Freund_hinzufügen_btn.Location = new System.Drawing.Point(40, 438);
-            this.Freund_hinzufügen_btn.Name = "Freund_hinzufügen_btn";
-            this.Freund_hinzufügen_btn.Size = new System.Drawing.Size(138, 49);
-            this.Freund_hinzufügen_btn.TabIndex = 1;
-            this.Freund_hinzufügen_btn.Text = "Freund hinzufügen";
-            this.Freund_hinzufügen_btn.UseVisualStyleBackColor = true;
-            this.Freund_hinzufügen_btn.Click += new System.EventHandler(this.Freund_hinzufügen_btn_Click);
+            this.btnZuFreund.Location = new System.Drawing.Point(40, 438);
+            this.btnZuFreund.Name = "btnZuFreund";
+            this.btnZuFreund.Size = new System.Drawing.Size(138, 49);
+            this.btnZuFreund.TabIndex = 1;
+            this.btnZuFreund.Text = "Freund hinzufügen";
+            this.btnZuFreund.UseVisualStyleBackColor = true;
+            this.btnZuFreund.Click += new System.EventHandler(this.Freund_hinzufügen_btn_Click);
             // 
             // über_mich_button
             // 
@@ -245,13 +246,77 @@
             // 
             // gbInteressen
             // 
-            this.gbInteressen.Controls.Add(this.textBox1);
+            this.gbInteressen.Controls.Add(this.btnFreundhinzufuegen);
+            this.gbInteressen.Controls.Add(this.tbLieblingsessen);
+            this.gbInteressen.Controls.Add(this.tbLieblingsfarbe);
+            this.gbInteressen.Controls.Add(this.tbLieblingsdino);
+            this.gbInteressen.Controls.Add(this.tbMusikrichtung);
+            this.gbInteressen.Controls.Add(this.tbHobbys);
             this.gbInteressen.Location = new System.Drawing.Point(4, 272);
             this.gbInteressen.Name = "gbInteressen";
             this.gbInteressen.Size = new System.Drawing.Size(742, 305);
             this.gbInteressen.TabIndex = 1;
             this.gbInteressen.TabStop = false;
             this.gbInteressen.Text = "Interessen";
+            // 
+            // btnFreundhinzufuegen
+            // 
+            this.btnFreundhinzufuegen.Location = new System.Drawing.Point(286, 201);
+            this.btnFreundhinzufuegen.Name = "btnFreundhinzufuegen";
+            this.btnFreundhinzufuegen.Size = new System.Drawing.Size(137, 57);
+            this.btnFreundhinzufuegen.TabIndex = 5;
+            this.btnFreundhinzufuegen.Text = "Freund hinzufügen";
+            this.btnFreundhinzufuegen.UseVisualStyleBackColor = true;
+            // 
+            // tbLieblingsessen
+            // 
+            this.tbLieblingsessen.Location = new System.Drawing.Point(7, 128);
+            this.tbLieblingsessen.Name = "tbLieblingsessen";
+            this.tbLieblingsessen.Size = new System.Drawing.Size(100, 20);
+            this.tbLieblingsessen.TabIndex = 4;
+            this.tbLieblingsessen.Text = "Lieblingsessen";
+            this.tbLieblingsessen.Enter += new System.EventHandler(this.tbLieblingsessen_Enter);
+            this.tbLieblingsessen.Leave += new System.EventHandler(this.tbLieblingsessen_Leave);
+            // 
+            // tbLieblingsfarbe
+            // 
+            this.tbLieblingsfarbe.Location = new System.Drawing.Point(7, 101);
+            this.tbLieblingsfarbe.Name = "tbLieblingsfarbe";
+            this.tbLieblingsfarbe.Size = new System.Drawing.Size(100, 20);
+            this.tbLieblingsfarbe.TabIndex = 3;
+            this.tbLieblingsfarbe.Text = "Lieblingsfarbe";
+            this.tbLieblingsfarbe.Enter += new System.EventHandler(this.tbLieblingsfarbe_Enter);
+            this.tbLieblingsfarbe.Leave += new System.EventHandler(this.tbLieblingsfarbe_Leave);
+            // 
+            // tbLieblingsdino
+            // 
+            this.tbLieblingsdino.Location = new System.Drawing.Point(7, 74);
+            this.tbLieblingsdino.Name = "tbLieblingsdino";
+            this.tbLieblingsdino.Size = new System.Drawing.Size(100, 20);
+            this.tbLieblingsdino.TabIndex = 2;
+            this.tbLieblingsdino.Text = "Lieblingsdino";
+            this.tbLieblingsdino.Enter += new System.EventHandler(this.tbLieblingsdino_Enter);
+            this.tbLieblingsdino.Leave += new System.EventHandler(this.tbLieblingsdino_Leave);
+            // 
+            // tbMusikrichtung
+            // 
+            this.tbMusikrichtung.Location = new System.Drawing.Point(6, 47);
+            this.tbMusikrichtung.Name = "tbMusikrichtung";
+            this.tbMusikrichtung.Size = new System.Drawing.Size(100, 20);
+            this.tbMusikrichtung.TabIndex = 1;
+            this.tbMusikrichtung.Text = "Musikrichtung";
+            this.tbMusikrichtung.Enter += new System.EventHandler(this.tbMusikrichtung_Enter);
+            this.tbMusikrichtung.Leave += new System.EventHandler(this.tbMusikrichtung_Leave);
+            // 
+            // tbHobbys
+            // 
+            this.tbHobbys.Location = new System.Drawing.Point(7, 20);
+            this.tbHobbys.Name = "tbHobbys";
+            this.tbHobbys.Size = new System.Drawing.Size(100, 20);
+            this.tbHobbys.TabIndex = 0;
+            this.tbHobbys.Text = "Hobbys";
+            this.tbHobbys.Enter += new System.EventHandler(this.tbHobbys_Enter);
+            this.tbHobbys.Leave += new System.EventHandler(this.tbHobbys_Leave);
             // 
             // gbPersönliches
             // 
@@ -272,6 +337,36 @@
             this.gbPersönliches.TabStop = false;
             this.gbPersönliches.Text = "Persönliches";
             // 
+            // tbHausnummer
+            // 
+            this.tbHausnummer.Location = new System.Drawing.Point(286, 73);
+            this.tbHausnummer.Name = "tbHausnummer";
+            this.tbHausnummer.Size = new System.Drawing.Size(100, 20);
+            this.tbHausnummer.TabIndex = 11;
+            this.tbHausnummer.Text = "Hausnummer";
+            this.tbHausnummer.Enter += new System.EventHandler(this.tbHausnummer_Enter);
+            this.tbHausnummer.Leave += new System.EventHandler(this.tbHausnummer_Leave);
+            // 
+            // tbStraße
+            // 
+            this.tbStraße.Location = new System.Drawing.Point(286, 46);
+            this.tbStraße.Name = "tbStraße";
+            this.tbStraße.Size = new System.Drawing.Size(100, 20);
+            this.tbStraße.TabIndex = 10;
+            this.tbStraße.Text = "Straße";
+            this.tbStraße.Enter += new System.EventHandler(this.tbStraße_Enter);
+            this.tbStraße.Leave += new System.EventHandler(this.tbStraße_Leave);
+            // 
+            // tbOrt
+            // 
+            this.tbOrt.Location = new System.Drawing.Point(286, 20);
+            this.tbOrt.Name = "tbOrt";
+            this.tbOrt.Size = new System.Drawing.Size(100, 20);
+            this.tbOrt.TabIndex = 9;
+            this.tbOrt.Text = "Ort";
+            this.tbOrt.Enter += new System.EventHandler(this.tbOrt_Enter);
+            this.tbOrt.Leave += new System.EventHandler(this.tbOrt_Leave);
+            // 
             // tbHaarfarbe
             // 
             this.tbHaarfarbe.Location = new System.Drawing.Point(7, 178);
@@ -279,6 +374,8 @@
             this.tbHaarfarbe.Size = new System.Drawing.Size(100, 20);
             this.tbHaarfarbe.TabIndex = 8;
             this.tbHaarfarbe.Text = "Haarfarbe";
+            this.tbHaarfarbe.Enter += new System.EventHandler(this.tbHaarfarbe_Enter);
+            this.tbHaarfarbe.Leave += new System.EventHandler(this.tbHaarfarbe_Leave);
             // 
             // mtbGewicht
             // 
@@ -340,37 +437,6 @@
             this.tbVorname.Enter += new System.EventHandler(this.tbVorname_Enter);
             this.tbVorname.Leave += new System.EventHandler(this.tbVorname_Leave);
             // 
-            // tbOrt
-            // 
-            this.tbOrt.Location = new System.Drawing.Point(286, 20);
-            this.tbOrt.Name = "tbOrt";
-            this.tbOrt.Size = new System.Drawing.Size(100, 20);
-            this.tbOrt.TabIndex = 9;
-            this.tbOrt.Text = "Ort";
-            // 
-            // tbStraße
-            // 
-            this.tbStraße.Location = new System.Drawing.Point(286, 46);
-            this.tbStraße.Name = "tbStraße";
-            this.tbStraße.Size = new System.Drawing.Size(100, 20);
-            this.tbStraße.TabIndex = 10;
-            this.tbStraße.Text = "Straße";
-            // 
-            // tbHausnummer
-            // 
-            this.tbHausnummer.Location = new System.Drawing.Point(286, 73);
-            this.tbHausnummer.Name = "tbHausnummer";
-            this.tbHausnummer.Size = new System.Drawing.Size(100, 20);
-            this.tbHausnummer.TabIndex = 11;
-            this.tbHausnummer.Text = "Hausnummer";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(7, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
-            // 
             // BuchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,7 +483,7 @@
         private System.Windows.Forms.TabPage Startseite;
         private System.Windows.Forms.TabPage Über_Mich;
         private System.Windows.Forms.Button über_mich_button;
-        private System.Windows.Forms.Button Freund_hinzufügen_btn;
+        private System.Windows.Forms.Button btnZuFreund;
         private System.Windows.Forms.TabPage Freund_hinzufügen_page;
         private System.Windows.Forms.GroupBox gbInteressen;
         private System.Windows.Forms.GroupBox gbPersönliches;
@@ -431,7 +497,12 @@
         private System.Windows.Forms.TextBox tbHausnummer;
         private System.Windows.Forms.TextBox tbStraße;
         private System.Windows.Forms.TextBox tbOrt;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbHobbys;
+        private System.Windows.Forms.TextBox tbMusikrichtung;
+        private System.Windows.Forms.TextBox tbLieblingsdino;
+        private System.Windows.Forms.TextBox tbLieblingsfarbe;
+        private System.Windows.Forms.TextBox tbLieblingsessen;
+        private System.Windows.Forms.Button btnFreundhinzufuegen;
 
 
     }

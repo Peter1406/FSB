@@ -20,46 +20,6 @@ namespace FSB
             init();
         }
 
-        private void einstellungenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripComboBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Einstellungen_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void freundHinzufügenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void skinsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void über_mich_button_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 1;
@@ -73,21 +33,28 @@ namespace FSB
                 TabPage myTabPage = new TabPage(title);
                 tabControl1.TabPages.Add(title);
             }
-        }
-
+        }        
         private void Freund_hinzufügen_btn_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 2;
         }
+        #region FreundHinzufügenDaten
+
 
         private void tbVorname_Enter(object sender, EventArgs e)
         {
-            tbVorname.Text = "";
+            if (tbVorname.Text == "Vorname")
+            {
+                tbVorname.Text = "";
+            }
         }
 
         private void tbNachname_Enter(object sender, EventArgs e)
         {
-            tbNachname.Text = "";
+            if (tbNachname.Text == "Nachname")
+            {
+                tbNachname.Text = "";
+            }
         }
 
         private void mtbGeburtsdatum_Enter(object sender, EventArgs e)
@@ -150,7 +117,10 @@ namespace FSB
 
         private void tbAugenfarbe_Enter(object sender, EventArgs e)
         {
-            tbAugenfarbe.Text = "";
+            if (tbAugenfarbe.Text == "Augenfarbe")
+            {
+                tbAugenfarbe.Text = "";
+            }
         }
 
         private void tbAugenfarbe_Leave(object sender, EventArgs e)
@@ -160,5 +130,150 @@ namespace FSB
                 tbAugenfarbe.Text = "Augenfarbe";
             }
         }
+
+        private void tbHobbys_Enter(object sender, EventArgs e)
+        {
+            if (tbHobbys.Text == "Hobbys")
+            {
+                tbHobbys.Text = "";
+            }
+        }
+
+        private void tbHobbys_Leave(object sender, EventArgs e)
+        {
+            if (tbHobbys.Text == "")
+            {
+                tbHobbys.Text = "Hobbys";
+            }
+        }
+
+        private void tbMusikrichtung_Enter(object sender, EventArgs e)
+        {
+            if(tbMusikrichtung.Text == "Musikrichtung")
+            {
+                tbMusikrichtung.Text = "";
+            }
+        }
+
+        private void tbMusikrichtung_Leave(object sender, EventArgs e)
+        {
+            if(tbMusikrichtung.Text == "")
+            {
+                tbMusikrichtung.Text = "Musikrichtung";
+            }
+        }
+
+        private void tbLieblingsdino_Enter(object sender, EventArgs e)
+        {
+            if(tbLieblingsdino.Text =="Lieblingsdino")
+            {
+                tbLieblingsdino.Text = "";
+            }
+        }
+
+        private void tbLieblingsdino_Leave(object sender, EventArgs e)
+        {
+            if(tbLieblingsdino.Text == "")
+            {
+                tbLieblingsdino.Text = "Lieblingsdino";
+            }
+        }
+
+        private void tbLieblingsfarbe_Leave(object sender, EventArgs e)
+        {
+            if(tbLieblingsfarbe.Text == "")
+            {
+                tbLieblingsfarbe.Text = "Lieblingsfarbe";
+            }
+        }
+
+        private void tbLieblingsfarbe_Enter(object sender, EventArgs e)
+        {
+            if(tbLieblingsfarbe.Text =="Lieblingsfarbe")
+            {
+                tbLieblingsfarbe.Text = "";
+            }
+        }
+
+        private void tbLieblingsessen_Leave(object sender, EventArgs e)
+        {
+            if(tbLieblingsessen.Text =="")
+            {
+                tbLieblingsessen.Text = "Lieblingsessen";
+            }
+        }
+
+        private void tbLieblingsessen_Enter(object sender, EventArgs e)
+        {
+            if(tbLieblingsessen.Text =="Lieblingsessen")
+            {
+                tbLieblingsessen.Text = "";
+            }
+        }
+
+        private void tbHaarfarbe_Leave(object sender, EventArgs e)
+        {
+            if(tbHaarfarbe.Text == "")
+            {
+                tbHaarfarbe.Text = "Haarfarbe";
+            }
+        }
+
+        private void tbHaarfarbe_Enter(object sender, EventArgs e)
+        {
+            if(tbHaarfarbe.Text == "Haarfarbe")
+            {
+                tbHaarfarbe.Text = "";
+            }
+        }
+
+        private void tbOrt_Leave(object sender, EventArgs e)
+        {
+            if(tbOrt.Text == "")
+            {
+                tbOrt.Text = "Ort";
+            }
+        }
+
+        private void tbOrt_Enter(object sender, EventArgs e)
+        {
+            if(tbOrt.Text =="Ort")
+            {
+                tbOrt.Text = "";
+            }
+        }
+
+        private void tbStraße_Leave(object sender, EventArgs e)
+        {
+            if(tbStraße.Text == "")
+            {
+                tbStraße.Text = "Straße";
+            }
+        }
+
+        private void tbStraße_Enter(object sender, EventArgs e)
+        {
+            if(tbStraße.Text == "Straße")
+            {
+                tbStraße.Text = "";
+            }
+        }
+
+        private void tbHausnummer_Leave(object sender, EventArgs e)
+        {
+            if(tbHausnummer.Text == "")
+            {
+                tbHausnummer.Text = "Hausnummer";
+            }
+        }
+
+        private void tbHausnummer_Enter(object sender, EventArgs e)
+        {
+            if(tbHausnummer.Text =="Hausnummer")
+            {
+                tbHausnummer.Text = "";
+            }
+        }
+        #endregion
     }
 }
