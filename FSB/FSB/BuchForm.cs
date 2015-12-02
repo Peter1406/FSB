@@ -40,7 +40,6 @@ namespace FSB
         }
         #region FreundHinzufügenDaten
 
-
         private void tbVorname_Enter(object sender, EventArgs e)
         {
             if (tbVorname.Text == "Vorname")
@@ -272,6 +271,243 @@ namespace FSB
             if(tbHausnummer.Text =="Hausnummer")
             {
                 tbHausnummer.Text = "";
+            }
+        }
+        #endregion
+
+        #region ÜberMichDaten
+
+        private void tbVornameÜM_Enter(object sender, EventArgs e)
+        {
+            if (tbVornameÜM.Text == "Vorname")
+            {
+                tbVornameÜM.Text = "";
+            }
+        }
+
+        private void tbNachnameÜM_Enter(object sender, EventArgs e)
+        {
+            if (tbNachnameÜM.Text == "Nachname")
+            {
+                tbNachnameÜM.Text = "";
+            }
+        }
+
+        private void mtbGeburtsdatumÜM_Enter(object sender, EventArgs e)
+        {
+            mtbGeburtsdatumÜM.Mask = "00.00.0000";
+        }
+
+        private void mtbGeburtsdatumÜM_Leave(object sender, EventArgs e)
+        {
+            if (mtbGeburtsdatumÜM.Text == "  ,  ,")
+            {
+                mtbGeburtsdatumÜM.Mask = "";
+                mtbGeburtsdatumÜM.Text = "Geburtsdatum";
+            }
+        }
+
+        private void tbNachnameÜM_Leave(object sender, EventArgs e)
+        {
+            if (tbNachnameÜM.Text == "")
+            {
+                tbNachnameÜM.Text = "Nachname";
+            }
+        }
+
+        private void tbVornameÜM_Leave(object sender, EventArgs e)
+        {
+            if (tbVornameÜM.Text == "")
+            {
+                tbVornameÜM.Text = "Vorname";
+            }
+        }
+
+        private void mtbGewichtÜM_Enter(object sender, EventArgs e)
+        {
+            mtbGewichtÜM.Mask = "000 kg";
+        }
+
+        private void mtbGewichtÜM_Leave(object sender, EventArgs e)
+        {
+            if (mtbGewichtÜM.Text == "    kg")
+            {
+                mtbGewichtÜM.Mask = "";
+                mtbGewichtÜM.Text = "Gewicht";
+            }
+        }
+
+        private void mtbGrößeÜM_Leave(object sender, EventArgs e)
+        {
+            if (mtbGrößeÜM.Text == "    cm")
+            {
+                mtbGrößeÜM.Mask = "";
+                mtbGrößeÜM.Text = "Größe";
+            }
+        }
+
+        private void mtbGrößeÜM_Enter(object sender, EventArgs e)
+        {
+            mtbGrößeÜM.Mask = "000 cm";
+        }
+
+        private void tbAugenfarbeÜM_Enter(object sender, EventArgs e)
+        {
+            if (tbAugenfarbeÜM.Text == "Augenfarbe")
+            {
+                tbAugenfarbeÜM.Text = "";
+            }
+        }
+
+        private void tbAugenfarbeÜM_Leave(object sender, EventArgs e)
+        {
+            if (tbAugenfarbeÜM.Text == "")
+            {
+                tbAugenfarbeÜM.Text = "Augenfarbe";
+            }
+        }
+
+        private void tbHobbysÜM_Enter(object sender, EventArgs e)
+        {
+            if (tbHobbysÜM.Text == "Hobbys")
+            {
+                tbHobbysÜM.Text = "";
+            }
+        }
+
+        private void tbHobbysÜM_Leave(object sender, EventArgs e)
+        {
+            if (tbHobbysÜM.Text == "")
+            {
+                tbHobbysÜM.Text = "Hobbys";
+            }
+        }
+
+        private void tbMusikrichtungÜM_Enter(object sender, EventArgs e)
+        {
+            if (tbMusikrichtungÜM.Text == "Musikrichtung")
+            {
+                tbMusikrichtungÜM.Text = "";
+            }
+        }
+
+        private void tbMusikrichtungÜM_Leave(object sender, EventArgs e)
+        {
+            if (tbMusikrichtungÜM.Text == "")
+            {
+                tbMusikrichtungÜM.Text = "Musikrichtung";
+            }
+        }
+
+        private void tbLieblingsdinoÜM_Enter(object sender, EventArgs e)
+        {
+            if (tbLieblingsdinoÜM.Text == "Lieblingsdino")
+            {
+                tbLieblingsdinoÜM.Text = "";
+            }
+        }
+
+        private void tbLieblingsdinoÜM_Leave(object sender, EventArgs e)
+        {
+            if (tbLieblingsdinoÜM.Text == "")
+            {
+                tbLieblingsdinoÜM.Text = "Lieblingsdino";
+            }
+        }
+
+        private void tbLieblingsfarbeÜM_Leave(object sender, EventArgs e)
+        {
+            if (tbLieblingsfarbeÜM.Text == "")
+            {
+                tbLieblingsfarbeÜM.Text = "Lieblingsfarbe";
+            }
+        }
+
+        private void tbLieblingsfarbeÜM_Enter(object sender, EventArgs e)
+        {
+            if (tbLieblingsfarbeÜM.Text == "Lieblingsfarbe")
+            {
+                tbLieblingsfarbeÜM.Text = "";
+            }
+        }
+
+        private void tbLieblingsessenÜM_Leave(object sender, EventArgs e)
+        {
+            if (tbLieblingsessenÜM.Text == "")
+            {
+                tbLieblingsessenÜM.Text = "Lieblingsessen";
+            }
+        }
+
+        private void tbLieblingsessenÜM_Enter(object sender, EventArgs e)
+        {
+            if (tbLieblingsessenÜM.Text == "Lieblingsessen")
+            {
+                tbLieblingsessenÜM.Text = "";
+            }
+        }
+
+        private void tbHaarfarbeÜM_Leave(object sender, EventArgs e)
+        {
+            if (tbHaarfarbeÜM.Text == "")
+            {
+                tbHaarfarbeÜM.Text = "Haarfarbe";
+            }
+        }
+
+        private void tbHaarfarbeÜM_Enter(object sender, EventArgs e)
+        {
+            if (tbHaarfarbeÜM.Text == "Haarfarbe")
+            {
+                tbHaarfarbeÜM.Text = "";
+            }
+        }
+
+        private void tbOrtÜM_Leave(object sender, EventArgs e)
+        {
+            if (tbOrtÜM.Text == "")
+            {
+                tbOrtÜM.Text = "Ort";
+            }
+        }
+
+        private void tbOrtÜM_Enter(object sender, EventArgs e)
+        {
+            if (tbOrtÜM.Text == "Ort")
+            {
+                tbOrtÜM.Text = "";
+            }
+        }
+
+        private void tbStraßeÜM_Leave(object sender, EventArgs e)
+        {
+            if (tbStraßeÜM.Text == "")
+            {
+                tbStraßeÜM.Text = "Straße";
+            }
+        }
+
+        private void tbStraßeÜM_Enter(object sender, EventArgs e)
+        {
+            if (tbStraßeÜM.Text == "Straße")
+            {
+                tbStraßeÜM.Text = "";
+            }
+        }
+
+        private void tbHausnummerÜM_Leave(object sender, EventArgs e)
+        {
+            if (tbHausnummerÜM.Text == "")
+            {
+                tbHausnummerÜM.Text = "Hausnummer";
+            }
+        }
+
+        private void tbHausnummerÜM_Enter(object sender, EventArgs e)
+        {
+            if (tbHausnummerÜM.Text == "Hausnummer")
+            {
+                tbHausnummerÜM.Text = "";
             }
         }
         #endregion
